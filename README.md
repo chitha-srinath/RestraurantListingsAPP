@@ -125,7 +125,7 @@ value is fixed "User, Admin, Business Owner" and should not be changed
 | `Images`      | `strings array` | **Required**. image urls |
 
 
-#### GET businesses
+#### Get businesses
 
 ```http
   GET /v1/api/getBusiness
@@ -167,7 +167,7 @@ value is fixed "User, Admin, Business Owner" and should not be changed
 
 
 
-#### GET Reviews
+#### Get Reviews
 
 ```http
   GET /v1/api/getReviews/:BusinessId
