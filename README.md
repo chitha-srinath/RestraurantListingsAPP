@@ -175,10 +175,10 @@ value is fixed "User, Admin, Business Owner" and should not be changed
   get all reviews
 ```
 
-#### Update business
+#### Update Review
 
 ```http
-  POST /v1/api/updateBusiness
+  POST /v1/api/updateReview
 ```
 
 | Parameter | Type     | Description                       |
