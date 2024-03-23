@@ -12,7 +12,7 @@ Routes.route("/register").post(Register);
 
 Routes.route("/logout").get(VerifyToken, Logout);
 
-Routes.route("/getAccessToken").post(GetRefreshAccessToken);
+Routes.route("/getAccessToken").get(GetRefreshAccessToken);
 
 // Business Listings
 Routes.route("/addBusiness").post(VerifyToken, createBusiness);

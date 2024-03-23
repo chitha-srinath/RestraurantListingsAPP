@@ -29,8 +29,7 @@ export async function Register(req, res) {
 export async function Logout(req, res) {
   try {
     let result = await logout(req, res);
-
-    let response = CreateResponse(200, "success", result);
+    let response = CreateResponse(200, "success", result.msg);
     return res.send(response);
   } catch (err) {
     let response = CreateResponse(501, "internal error", err);
@@ -42,7 +41,7 @@ export async function GetRefreshAccessToken(req, res) {
   try {
     let result = await refreshAccessToken(req, res);
 
-    let response = CreateResponse(200, "success", result);
+    let response = CreateResponse(200, "success", result.msg);
     return res.send(response);
   } catch (err) {
     let response = CreateResponse(501, "internal error", err);

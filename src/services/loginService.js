@@ -118,7 +118,7 @@ export async function logout(req, res) {
 
     await updateone(
       userSchema,
-      { _id: req["CustomerDetails"]._id },
+      { _id: req["UserInfo"]._id },
       { RefreshToken: "" }
     );
 
@@ -131,7 +131,10 @@ export async function logout(req, res) {
 
     res.clearCookie("AccessTokenKey", cookieOptions);
     res.clearCookie("RefreshTokenKey", cookieOptions);
-    return "User logged out successfully";
+    return {
+      msg: `${req["UserInfo"].Role || "User"} logged out successfully`,
+      code: 200,
+    };
   } catch (err) {
     return err;
   }
@@ -173,6 +176,7 @@ export async function refreshAccessToken(req, res) {
         secure: true,
       };
       res.cookie("AccessTokenKey", acessToken, cookieOptions);
+      return { msg: `Access token generted successfully`, code: 200 };
     } else {
       return "failed to get refreshToken";
     }
