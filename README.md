@@ -98,6 +98,17 @@ value is fixed "User, Admin, Business Owner" and should not be changed
 | `UserName`      | `string` | *optional*. |
 | `Email`      | `string` | **Required**. Id of item to fetch |
 
+#### Logout a user (any role)
+
+```http
+  GET /v1/api/logout
+```
+
+#### Generate Access Token
+
+```http
+  GET /v1/api/getAccessToken
+```
 
 #### Login a user (any role)
 
